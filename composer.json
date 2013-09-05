@@ -1,0 +1,18 @@
+{
+    "name": "codnet/cose-security",
+    "type": "library","version":"1.0.0",
+    "description": "CRUD for Codnet Services for PHP",
+    "keywords": ["php", "framework", "services", "security", "doctrine", "codnet"],
+    "homepage": "http://www.codnet.com.ar",
+    "license": "GPL v2",
+    "authors": [
+        {"name": "Bernardo Iribarne", "email": "ber.iribarne@gmail.com"}
+    ],
+    "require": {
+        "codnet/cose": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { 
+        	"Cose\\Secutiry": "src/main/php" }
+    }
+}
