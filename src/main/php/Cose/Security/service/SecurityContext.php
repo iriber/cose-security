@@ -54,7 +54,8 @@ class SecurityContext {
 	}
 	
 	private function __construct() {
-		$this->securityService = new SecurityServiceImpl();
+		
+		$this->securityService = ServiceFactory::getSecurityService();
 	}
 	
 	/**
@@ -84,7 +85,7 @@ class SecurityContext {
 	 */
 	function logout(){
 		$this->user = null;
-		$_SESSION['securityContext'] = serialize( $this );
+		unset( $_SESSION['securityContext'] );
 	}
 	
 	

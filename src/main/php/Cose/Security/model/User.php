@@ -85,6 +85,20 @@ class User extends Entity{
 		
 	}
 
+	public function hasPermissionByName($name){
+	
+		$ok = false;
+		
+		foreach ($this->getGroups() as $myGroup) {
+			$ok = $myGroup->hasPermissionByName($name);
+			if( $ok )
+				break;
+		}
+		
+		return $ok;
+		
+	}
+	
 	public function getName()
 	{
 	    return $this->name;

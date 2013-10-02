@@ -18,4 +18,6 @@ interface IUserService extends ICrudService {
 	 * @throws ServiceException
 	 */
 	function getUserByUsername($username);
+	
+	
 }

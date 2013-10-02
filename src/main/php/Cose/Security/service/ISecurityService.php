@@ -34,7 +34,7 @@ interface ISecurityService extends IService{
 	 * @return boolean
 	 * @throws ServiceException
 	 */
-	function authorize( User $user, IService $service, $method="" );
+	function authorize( User $user=null, IService $service, $method="" );
 	
 		
 }

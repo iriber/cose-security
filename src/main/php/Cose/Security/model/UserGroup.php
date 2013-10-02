@@ -64,4 +64,18 @@ class UserGroup extends Entity{
 	{
 	    $this->permissions = $permissions;
 	}
+	
+	public function hasPermissionByName($name){
+	
+		$ok = false;
+		
+		foreach ($this->getPermissions() as $myPermission) {
+			$ok = strtoupper($myPermission->getName()) == strtoupper($name);
+			if( $ok )
+				break;
+		}
+		
+		return $ok;
+		
+	}
 }
